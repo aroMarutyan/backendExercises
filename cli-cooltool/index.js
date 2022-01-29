@@ -70,3 +70,17 @@ async function handleAnswer(isCorrect) {
     process.exit(1);
   }
 }
+
+function winner() {
+  console.clear();
+  figlet(`Congrats , ${playerName} !\n $ 1 , 0 0 0 , 0 0 0`, (err, data) => {
+    console.log(gradient.pastel.multiline(data) + "\n");
+
+    console.log(
+      chalk.green(
+        `Programming isn't about what you know; it's about making the command line look cool`
+      )
+    );
+    process.exit(0);
+  });
+}
